@@ -10,18 +10,18 @@ const navItems = [
 ]
 
 export const Sidebar = () => {
-
-  const[isActive, setIsActive] = useState(false);
   
   return (
-    <aside className='fixed left-0 top-0 bottom-0 w-60 flex flex-col z-3'>
+    <aside className='fixed left-0 top-0 bottom-0 w-60 flex flex-col z-3 bg-slate-900 '>
       <nav className='flex-1  py-3 space-y-0.5 overflow-y-auto'>
         {
           navItems.map((item) => {
+            const isActive = location.pathname === item.path;
             return (
               <Link
               key={item.path}
               to={item.path}
+              className={`flex items-center gap-3 px-3 py-2  rounded-md text-sm font-medium transition-colors ${ isActive ? "text-primary" : "  " }      `}
               >
                 <item.icon className='w-4 h-4 shrink-0' />
               {item.label}
