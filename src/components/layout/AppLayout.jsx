@@ -1,18 +1,17 @@
 
-
 import React from "react";
 import { Sidebar } from "./Sidebar";
 import { Outlet } from "react-router-dom";
 
 export const AppLayout = () => {
   return (
-    <div>
-      <div className="hidden  md:block">
+    <div className=" min-h-screen flex flex-row" >
+      <div>
         <Sidebar />
       </div>
 
       <main >
-        <div className="text-white" >
+        <div>
           <Outlet />
         </div>
       </main>

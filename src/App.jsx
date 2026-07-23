@@ -13,14 +13,14 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route  element={<AppLayout />}>
+        <Route element={<AppLayout />}>
           <Route path="/" element={<Home />} />
           <Route path="/invoices" element={<Invoices />} />
-          <Route path="/subscriptions" element={<Subscriptions />} /> 
-          <Route path="/api-usage" element={<ApiUsage />} /> 
-          <Route path="/overview" element={<Overview />} /> 
-          <Route path="/settings" element={<Settings />} /> 
-          <Route path="/webhooks" element={<Webhooks />} /> 
+          <Route path="/subscriptions" element={<Subscriptions />} />
+          <Route path="/api-usage" element={<ApiUsage />} />
+          <Route path="/overview" element={<Overview />} />
+          <Route path="/settings" element={<Settings />} />
+          <Route path="/webhooks" element={<Webhooks />} />
         </Route>
       </Routes>
     </BrowserRouter>
