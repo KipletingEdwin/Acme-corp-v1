@@ -1,8 +1,11 @@
 
 import React from 'react'
+import { PageHeader } from '../components/shared/PageHeader'
 
 export const Home = () => {
   return (
-    <div>Home</div>
+    <div>
+      <PageHeader title="Dashboard" description="Overview for ....." />
+    </div>
   )
 }

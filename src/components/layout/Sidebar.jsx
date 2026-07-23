@@ -22,19 +22,17 @@ const navItems = [
 ];
 
 const organizations = [
-  {label: "Acme Corp", icon: Building2},
-  {label: "TechFlow Inc", icon: Building2},
-  {label: "StartupLab", icon: Building2},
+  {name: "Acme Corp", plan: "Growth Plan", icon: Building2},
+  {name: "TechFlow Inc",plan: "Enterprise Plan", icon: Building2},
+  {name: "StartupLab",plan: "Starter Plan", icon: Building2},
 ];
 
 export const Sidebar = () => {
   return (
-    <aside className="fixed left-0 top-0 bottom-0 z-30 p-3 w-60 bg-sidebar border-r border-sidebar-border min-h-screen flex flex-col justify-between">
-      <div>
-        <div>
-          
 
-        </div>
+    
+    <aside className="left-0 top-0 bottom-0 z-30 p-3 w-60 relative  border-r border-sidebar-border min-h-screen flex flex-col justify-between">
+      <div>
         <nav className="flex flex-col py-3 space-y-0.5 overflow-y-auto   ">
           {navItems.map((item) => (
             <NavLink
