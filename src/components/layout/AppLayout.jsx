@@ -11,8 +11,8 @@ export const AppLayout = () => {
         <Sidebar />
       </div>
 
-      <main>
-        <div>
+      <main >
+        <div className="text-white" >
           <Outlet />
         </div>
       </main>
@@ -20,14 +20,4 @@ export const AppLayout = () => {
   );
 };
 
-// <div>
-//   <div className="hidden md:block  bg-slate-900 w-3xs ">
-//     <Sidebar />
-//   </div>
 
-//   <main className="md:pl-60 pt-14 md:pt-0">
-//     <div className="max-w-7xl mx-auto px-4 sm:px-6 py-6">
-//       <Outlet />
-//     </div>
-//   </main>
-// </div>;
