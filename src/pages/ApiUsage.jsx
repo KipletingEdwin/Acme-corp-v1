@@ -1,8 +1,11 @@
 
 import React from 'react'
+import { PageHeader } from '../components/shared/PageHeader'
 
 export const ApiUsage = () => {
   return (
-    <div>ApiUsage</div>
+    <div>
+      <PageHeader title="API Usage" description="Monitor API performance and traffic" />
+    </div>
   )
 }
