@@ -10,7 +10,7 @@ import {
   Webhook,
 } from "lucide-react";
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 const navItems = [
   { label: "Overview", path: "/", icon: LayoutDashboard },
@@ -28,6 +28,13 @@ const organizations = [
 ];
 
 export const Sidebar = () => {
+  const navigate = useNavigate();
+
+  const handleSignOut = () => {
+    navigate("/login");
+  };
+
+
   return (
 
     
@@ -53,7 +60,7 @@ export const Sidebar = () => {
         </nav>
       </div>
       <div className="p-3 border-t border-sidebar-border ">
-        <button className="flex items-center gap-3 py-2 rounded-md text-sm text-muted-foreground hover:text-foreground hover:bg-sidebar-accent transition-colors w-full">
+        <button onClick={handleSignOut}  className="flex items-center gap-3 py-2 rounded-md text-sm text-muted-foreground hover:text-foreground hover:bg-sidebar-accent transition-colors w-full">
           <LogOut className="w-4 h-4" />
           Sign Out
         </button>
