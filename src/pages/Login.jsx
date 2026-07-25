@@ -26,10 +26,16 @@ export const Login = () => {
                 <span className='bg-card px-3 text-muted-foreground'>or</span>
             </div>
         </div>
+        {
+            error && (
+                <div className='mb-4 p-3 rounded-lg bg-destructive/10 text-destructive text-sm'>
+                    {error}
+                </div>
+            )
+        }
 
     </AuthLayout>
-  )
-}
+  )}
 
 
 
@@ -79,14 +85,6 @@ export const Login = () => {
 //         Continue with Google
 //       </Button>
 
-//       <div className="relative mb-6">
-//         <div className="absolute inset-0 flex items-center">
-//           <div className="w-full border-t border-border" />
-//         </div>
-//         <div className="relative flex justify-center text-xs uppercase">
-//           <span className="bg-card px-3 text-muted-foreground">or</span>
-//         </div>
-//       </div>
 
 //       {error && (
 //         <div className="mb-4 p-3 rounded-lg bg-destructive/10 text-destructive text-sm">
