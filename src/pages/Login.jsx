@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react'
 import { AuthLayout } from '../components/AuthLayout'
-import { LogInIcon } from 'lucide-react'
+import { LogInIcon, Mail } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
 export const Login = () => {
@@ -40,6 +40,11 @@ export const Login = () => {
   )}
   <form className='space-y-4'>
     <div className='space-y-2'>
+        <label htmlFor='email' >Email</label>
+        <div className='relative' >
+            <Mail className='absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground ' /> 
+            <input />
+        </div>
 
     </div>
 
