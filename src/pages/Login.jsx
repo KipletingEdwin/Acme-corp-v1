@@ -1,9 +1,24 @@
 
 import React from 'react'
+import { AuthLayout } from '../components/AuthLayout'
+import { LogInIcon } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 export const Login = () => {
   return (
-    <div>Login</div>
+    <AuthLayout
+    icon={LogInIcon}
+    title="Welcome Back"
+    subtitle="Log in to your account"
+    footer={
+        <>
+        Don't have an account?
+        <Link to="/register" className='text-primary font-medium hover:underline'> Create one</Link>
+        </>
+    }
+    >
+
+    </AuthLayout>
   )
 }
 

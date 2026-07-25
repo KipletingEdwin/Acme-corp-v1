@@ -8,6 +8,7 @@ import { Overview } from "./pages/Overview";
 import { Settings } from "./pages/Settings";
 import { Webhooks } from "./pages/Webhooks";
 import { Login } from "./pages/Login";
+import { Register } from "./pages/Register";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/webhooks" element={<Webhooks />} />
         </Route>
         <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />}  />
       </Routes>
     </BrowserRouter>
   );
