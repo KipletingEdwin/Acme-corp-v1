@@ -18,6 +18,15 @@ export const Login = () => {
     }
     >
 
+        <div className='relative mb-6'>
+            <div className='absolute inset-0 flex items-center'>
+                <div className='w-full border-t border-border'/>
+            </div> 
+            <div className='relative flex justify-center text-xs uppercase'>
+                <span className='bg-card px-3 text-muted-foreground'>or</span>
+            </div>
+        </div>
+
     </AuthLayout>
   )
 }
@@ -60,17 +69,6 @@ export const Login = () => {
 
 //   return (
 //     <AuthLayout
-//       icon={LogIn}
-//       title="Welcome back"
-//       subtitle="Log in to your account"
-//       footer={
-//         <>
-//           Don't have an account?{" "}
-//           <Link to="/register" className="text-primary font-medium hover:underline">
-//             Create one
-//           </Link>
-//         </>
-//       }
 //     >
 //       <Button
 //         variant="outline"
