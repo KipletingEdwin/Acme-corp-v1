@@ -1,10 +1,12 @@
 
-import React from 'react'
+import React, { useState } from 'react'
 import { AuthLayout } from '../components/AuthLayout'
 import { LogInIcon } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
 export const Login = () => {
+
+    const[ error, setError] = useState("");
   return (
     <AuthLayout
     icon={LogInIcon}
@@ -36,8 +38,12 @@ export const Login = () => {
 
     </AuthLayout>
   )}
+  <form className='space-y-4'>
+    <div className='space-y-2'>
 
+    </div>
 
+  </form>
 
 // import React, { useState } from "react";
 // import { Link } from "react-router-dom";
