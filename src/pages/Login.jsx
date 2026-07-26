@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { AuthLayout } from "../components/AuthLayout";
-import { LogInIcon, Mail } from "lucide-react";
+import { Lock, LogInIcon, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export const Login = () => {
@@ -49,7 +49,10 @@ export const Login = () => {
             <div className="flex items-center justify-between">
                 <label htmlFor="password" >Password</label>
                 <Link to="/forgot-password" className="text-xs text-primary hover:underline">Forgot Password</Link>
-
+            </div>
+            <div>
+              <Lock className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground"/>
+              <input id="password" type="password"  placeholder="••••••••" required/>
             </div>
         </div>
       </form>
