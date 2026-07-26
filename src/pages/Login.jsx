@@ -1,54 +1,60 @@
-
-import React, { useState } from 'react'
-import { AuthLayout } from '../components/AuthLayout'
-import { LogInIcon, Mail } from 'lucide-react'
-import { Link } from 'react-router-dom'
+import React, { useState } from "react";
+import { AuthLayout } from "../components/AuthLayout";
+import { LogInIcon, Mail } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export const Login = () => {
-
-    const[ error, setError] = useState("");
+  const [error, setError] = useState("");
   return (
     <AuthLayout
-    icon={LogInIcon}
-    title="Welcome Back"
-    subtitle="Log in to your account"
-    footer={
+      icon={LogInIcon}
+      title="Welcome Back"
+      subtitle="Log in to your account"
+      footer={
         <>
-        Don't have an account?
-        <Link to="/register" className='text-primary font-medium hover:underline'> Create one</Link>
+          Don't have an account?
+          <Link
+            to="/register"
+            className="text-primary font-medium hover:underline"
+          >
+            {" "}
+            Create one
+          </Link>
         </>
-    }
+      }
     >
+      <div className="relative mb-6">
+        <div className="absolute inset-0 flex items-center">
+          <div className="w-full border-t border-border" />
+        </div>
+        <div className="relative flex justify-center text-xs uppercase">
+          <span className="bg-card px-3 text-muted-foreground">or</span>
+        </div>
+      </div>
+      {error && (
+        <div className="mb-4 p-3 rounded-lg bg-destructive/10 text-destructive text-sm">
+          {error}
+        </div>
+      )}
+      <form className="space-y-4 bg">
+        <div className="space-y-2">
+          <label htmlFor="email">Email</label>
+          <div className="relative">
+            <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground " />
+            <input id="email" type="email" placeholder="you@example.com" required/>
+          </div>
+        </div>
 
-        <div className='relative mb-6'>
-            <div className='absolute inset-0 flex items-center'>
-                <div className='w-full border-t border-border'/>
-            </div> 
-            <div className='relative flex justify-center text-xs uppercase'>
-                <span className='bg-card px-3 text-muted-foreground'>or</span>
+        <div className="space-y-2">
+            <div className="flex items-center justify-between">
+                <label htmlFor="password" >Password</label>
+
             </div>
         </div>
-        {
-            error && (
-                <div className='mb-4 p-3 rounded-lg bg-destructive/10 text-destructive text-sm'>
-                    {error}
-                </div>
-            )
-        }
-
+      </form>
     </AuthLayout>
-  )}
-  <form className='space-y-4'>
-    <div className='space-y-2'>
-        <label htmlFor='email' >Email</label>
-        <div className='relative' >
-            <Mail className='absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground ' /> 
-            <input />
-        </div>
-
-    </div>
-
-  </form>
+  );
+};
 
 // import React, { useState } from "react";
 // import { Link } from "react-router-dom";
@@ -95,7 +101,6 @@ export const Login = () => {
 //         <GoogleIcon className="w-5 h-5 mr-2" />
 //         Continue with Google
 //       </Button>
-
 
 //       {error && (
 //         <div className="mb-4 p-3 rounded-lg bg-destructive/10 text-destructive text-sm">
