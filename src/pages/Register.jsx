@@ -11,6 +11,18 @@ export const Register = () => {
   return (
     <AuthLayout
     icon={UserPlus}
+    title="Create your account"
+    subtitle="Signup to get started"
+    footer={
+      <>
+      Already have an account?
+      <Link
+       to="/login"
+       >
+      Login
+      </Link>
+      </>
+    }
     >
 
     </AuthLayout>
