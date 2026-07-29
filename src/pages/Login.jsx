@@ -5,6 +5,10 @@ import { Link } from "react-router-dom";
 
 export const Login = () => {
   const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
+
+
+
   return (
     <AuthLayout
       icon={LogInIcon}
