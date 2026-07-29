@@ -41,10 +41,10 @@ export const Login = () => {
         </div>
       )}
       <form className="space-y-4 bg">
-        <div className="space-y-2">
+        <div className="space-y-2  ">
           <label htmlFor="email">Email</label>
           <div className="relative">
-            <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground " />
+            <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground"/>
             <input id="email" type="email" placeholder="you@example.com" required/>
           </div>
         </div>
