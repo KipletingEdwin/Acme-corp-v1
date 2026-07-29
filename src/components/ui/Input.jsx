@@ -6,7 +6,7 @@ export const Input = ({ type, ...props }) => {
 
     <input
     type={type}
-    className='flex h-9 w-full '
+    className='flex h-9 w-full rounded-md border border-input bg-transparent px-3 '
      />
 
   )
