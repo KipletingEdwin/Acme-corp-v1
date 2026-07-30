@@ -2,12 +2,11 @@ import React, { useState } from "react";
 import { AuthLayout } from "../components/AuthLayout";
 import { Lock, LogInIcon, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
+import { Input } from "../components/ui/Input";
 
 export const Login = () => {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
-
-
 
   return (
     <AuthLayout
@@ -21,7 +20,6 @@ export const Login = () => {
             to="/register"
             className="text-primary font-medium hover:underline"
           >
-            {" "}
             Create one
           </Link>
         </>
@@ -44,20 +42,35 @@ export const Login = () => {
         <div className="space-y-2  ">
           <label htmlFor="email">Email</label>
           <div className="relative">
-            <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground"/>
-            <input id="email" type="email" placeholder="you@example.com" required/>
+            <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
+            <Input
+              id="email"
+              type="email"
+              placeholder="you@example.com"
+              required
+            />
           </div>
         </div>
 
         <div className="space-y-2">
-            <div className="flex items-center justify-between">
-                <label htmlFor="password" >Password</label>
-                <Link to="/forgot-password" className="text-xs text-primary hover:underline">Forgot Password</Link>
-            </div>
-            <div>
-              <Lock className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground"/>
-              <input id="password" type="password"  placeholder="••••••••" required/>
-            </div>
+          <div className="flex items-center justify-between">
+            <label htmlFor="password">Password</label>
+            <Link
+              to="/forgot-password"
+              className="text-xs text-primary hover:underline"
+            >
+              Forgot Password
+            </Link>
+          </div>
+          <div>
+            <Lock className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
+            <input
+              id="password"
+              type="password"
+              placeholder="••••••••"
+              required
+            />
+          </div>
         </div>
       </form>
     </AuthLayout>
